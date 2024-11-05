@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #2d2d3c;
+    font-weight: 300;
+    font-family: poppins;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #110815;
+    background-color:#feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-color: #fecc4c;
+    border-width: 3px;
+    
+}
+button:hover {
+  background-image: linear-gradient(#ffcc4c, #f89808);
+}
