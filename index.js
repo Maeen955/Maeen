@@ -1,32 +1,58 @@
-// javascript
-const btnEl = document.getElementById("btnEl");
-const hexEl = document.getElementById("hexEl");
-const main = document.getElementById("main");
-const colors = [
- "#000000", // Black
-  "#111111", // Dark Gray 1
-  "#222222", // Dark Gray 2
-  "#333333", // Dark Gray 3
-  "#444444", // Dark Gray 4
-  "#555555", // Dark Gray 5
-  "#666666", // Dark Gray 6
-  "#777777", // Dark Gray 7
-  "#888888", // Dark Gray 8
-  "#999999", // Dark Gray 9
-  "#8B0000", // Dark Red
-  "#8B008B", // Dark Magenta
-  "#00008B", // Dark Blue
-  "#006400", // Dark Green
-  "#B8860B", // Dark Goldenrod
-  "#A52A2A", // Brown
-  "#A0522D", // Sienna
-  "#808080", // Gray
-  "#008080", // Teal
-  "#4B0082"  // Indigo
-];
-btnEl.addEventListener("click", function(){
-    let random = Math.floor(Math.random() * colors.length)
-    let color = colors[random];
-    main.style.backgroundColor = color;
-    hexEl.innerText = color;
+const input = document.getElementById("input")
+const btn = document.getElementById("btn")
+const img = document.getElementById("img")
+const deg = document.getElementById("deg")
+const con = document.getElementById("con")
+const none = document.getElementById("weather-report")
+const drop = document.getElementById("drop")
+const km = document.getElementById("km")
+
+
+
+city = "dhaka"
+
+btn.addEventListener("click", ()=> {
+    weatherData(input.value)
 })
+
+async function weatherData(city) {
+    input.value = ""
+    const apiKey = "c68294fce6ca442b203c6d3a7308c950"
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+    const response = await fetch(url);
+    const data = await response.json();
+                console.log(data)
+    con.innerText =  data.weather[0].main;
+    deg.innerText =  Math.round(data.main.temp - 273.15) + "°C"
+    km.innerText = data.wind.speed + "km/H"
+    drop.innerText = data.main.humidity + "%"
+
+    switch (con.innerText){
+        case "Clear":
+            img.src = "sun.png";
+            break;
+        case "Rain":
+            img.src = "sky.png";
+            break;
+        case "Haze":
+            img.src = "weather.png";
+            break;
+        case "Clouds":
+            img.src = "storm.png"
+                
+
+    }
+
+
+
+}
+
+   
+
+   
+
+
+
+
+
+
