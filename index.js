@@ -21,7 +21,7 @@ async function weatherData(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
     const response = await fetch(url);
     const data = await response.json();
-                console.log(data)
+                
     con.innerText =  data.weather[0].main;
     deg.innerText =  Math.round(data.main.temp - 273.15) + "°C"
     km.innerText = data.wind.speed + "km/H"
