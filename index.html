@@ -1,13 +1,40 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div id="main">
-        <h2 id="randomEl">Random Background Color changer</h2>
-        <p>Hex Code: <span id="hexEl">#2d2d3c</span></p>
-        <button id="btnEl">Change Background color</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEATHER app javascript</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+<div class="container">
+    <div class="inbutBox">
+      <input id="input" type="text" placeholder="enter the city name">
+      <button id="btn" class="fa-solid fa-magnifying-glass"></button>
+    </div>
+      <div class="result">
+        <img id="img" src="storm.png" alt="" width="100%">
+        <p id="deg">28°C</p>
+        <p id="con">HAZE</p>
+      </div>
+      <div class="result1">
+
+        <div>
+          <i class="fa-solid fa-droplet"></i>
+          <p><span id="drop">50%</span> <br>HUMIDITY</p>
         </div>
-        <script src="index.js"></script>
-    </body>
+        <div>
+          <i class="fa-solid fa-wind"></i>
+          <p><span id="km">3.09km/H</span><br>WIND</p>
+          
+        </div>
+      </div>
+      <div>
+
+      </div>
+</div>
+<script src="practice.js"></script>
+  
+</body>
 </html>
