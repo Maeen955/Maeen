@@ -3,36 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WEATHER app javascript</title>
+  <title>Recipe_app_javascript</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div class="container">
-    <div class="inbutBox">
-      <input id="input" type="text" placeholder="enter the city name">
-      <button id="btn" class="fa-solid fa-magnifying-glass"></button>
+<div id="container">
+    <nav>
+      <h1>recipe app</h1>
+      <form>
+        <input id="input" type="text" placeholder="search for recipies">
+        <button id="btn">search</button>
+      </form> 
+    </nav>
+  <section id="sec">
+    <div id="result">
+      <h2>search your favorite recipes</h2>
     </div>
-      <div class="result">
-        <img id="img" src="storm.png" alt="" width="100%">
-        <p id="deg">28°C</p>
-        <p id="con">HAZE</p>
-      </div>
-      <div class="result1">
-
-        <div>
-          <i class="fa-solid fa-droplet"></i>
-          <p><span id="drop">50%</span> <br>HUMIDITY</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-wind"></i>
-          <p><span id="km">3.09km/H</span><br>WIND</p>
-          
-        </div>
-      </div>
-      <div>
-
-      </div>
+    <div id="recipeDtails">
+      <button type="button" id="closeBtn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="recipeDetailsContent"></div>
+    </div>
+  </section>
 </div>
 <script src="index.js"></script>
   
