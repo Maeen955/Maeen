@@ -70,15 +70,13 @@ form button:hover{
 }
 @media (max-width:600px) {
     #result{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
+        display: block; 
     }
  
     nav{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 50px;
         gap: 10px;
     } 
     nav h1{
@@ -94,7 +92,7 @@ form button:hover{
   
 
     #recipeDtails{
-        min-width: 50%;
+        min-width: 70%;
     }
     form button{
         width: 100px;
